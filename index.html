@@ -11,9 +11,144 @@
 	.parent{
 		padding: 5%;
 	}
+	.background{
+		background: lavender;
+	}
 	header{
 		margin-top: -5%;
+		display: flex;
+		gap: 28vw;
+		align-items: flex-start;
+		position: fixed;
+	}
+	nav ul li{
+background: #212;
+margin-bottom: 0.8rem;
+padding: 0.6rem;
+width: 6rem;
+text-align: center;
+	}
+	nav ul li a{
+color: lavender;
+text-decoration: none;
+	}
+	nav ul li:hover{
+cursor: pointer;
+background: black;
+border-radius: 1rem;
+	}
+	nav ul{
+		display: none;
+		margin-left: -25vw;
+		margin-bottom: -0.5rem;
+		list-style: none;
+	}
+	nav label:hover{
+		cursor: pointer;
+	}
+	#check{
+		display: none;
+	}
+	#check:checked ~ ul{
+display: block;
+
+	}
+	#check:checked + label::before{
+content: "\2715";
+		font-size: 1.4rem;
+		font-weight: 600;
+		background: red;
+		color: lavender;
+		padding: 0.3rem;
+	}
+	nav label::before{
+		content: "\2630";
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+	header div{
+	font-size: 1.6rem;
+		font-weight: 800;
+		border: 3px solid black;
+		text-align: center;
+		display: inline-block;
+		line-height: 3rem;
+		padding-right: 1rem;
+		padding-left: 1rem;
 	}	
+body{
+/*	background: #212;*/
+/*background-image:linear-gradient(to top-right, red, green, blue, yellow) ;*/
+background-image:radial-gradient(ellipse, #555, teal, lightgreen, skyblue, #212) ;
+}
+.welcome{
+	background:#212;
+	display: inline-block;
+	color: lavender;
+	padding: 1rem;
+	font-size: 1.3rem;
+	font-weight: 600;
+	animation:forwards;
+	animation-name:animate;
+	animation-delay: 1s;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	box-shadow:2px 1px 2px 1px #889;
+}
+@keyframes animate{
+	0%{
+		
+	opacity: 100%;
+	}
+	40%{
+	opacity: 60%;
+
+	}
+	70%{
+	opacity: 20%;
+
+	}
+	100%{
+		
+	opacity: 60%;
+	}
+	
+}
+main{
+	margin-top: 30vh;
+}
+@media(min-width:861px){
+	header{
+		gap: 40vw;
+	}
+}
+
+
+@media(min-width:961px){
+	nav ul{
+		display: flex;
+		gap: 4vw;
+
+	}
+	nav label{
+		display: none;
+	}
+	header{
+		gap: 35vw;
+	}
+}
+@media(min-width:1106px){
+	nav ul{
+		gap: 8vw;
+	}
+}
+
+main h2{
+	border-bottom: 2px solid black;
+	display: inline-block;
+}
+
 
 
 
@@ -23,82 +158,113 @@
 <body>
 <div class="parent">
 	
-<header>GT'S QUIZ COMPETETION</header>
+<header>
+<div class="compete">	GT'S QUIZ COMPETETION </div>
+<nav>
+	<input type="checkbox" id="check">
+	<label for="check"></label>
+	<ul>
+		<li> <a href="">Blog</a> </li>
+		<li> <a href="mailto:gtoleo21@gmail.com">Email-Us</a> </li>
+		<li> <a href="">Answers</a> </li>
+	</ul>
+</nav>
+</header>
 
 <main>
-	<p class="welcome">Welcome to GT's quiz competetion!</p>
-	<h2>General Questions</h2>
+	<p class="welcome">Welcome to GT's quiz competetion!</p> <br>
+	<h2>General Questions</h2> <br>
 	<button>Get Started</button>
 
 	<div class="Questions">
 		<p class="one">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no1">1.</span>
+Duralumin is used in building of railway coaches and aircraft bodies because ___?
+			   <br> <span> <input type="checkbox" name=""> A: it is a permanent margnet. </span> <br>
+			   <span> <input type="checkbox" name=""> B: it has an inbuilt engine. </span> <br>
+			   <span> <input type="checkbox" name=""> C: it is conductive and radioactive</span> <br>
+			   <span> <input type="checkbox" name=""> D: it is light and strong.</span>
 			   <br> <input type="button" value="NEXT" name="" class="next1">
 		</p>
 		<p class="two">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no2">2.</span>
+The best material for making a lightening conductor is ___? 
+			   <br> <span> <input type="checkbox" name=""> A: Gold</span> <br>
+			   <span> <input type="checkbox" name=""> B: Silver</span> <br>
+			   <span> <input type="checkbox" name=""> C: Copper</span> <br>
+			   <span> <input type="checkbox" name=""> D: Diamond</span>
 			   <br> <input type="button" value="NEXT" name="" class="next2">
 		</p>
 		<p class="three">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no3">3.</span>
+When an ebonite rod is rubbed with fur, the ebonite road acquires a ___ charge while the fur acquires a ___ charge?
+			   <br> <span> <input type="checkbox" name=""> A: positive, negative</span> <br>
+			   <span> <input type="checkbox" name=""> B: neutral, postive</span> <br>
+			   <span> <input type="checkbox" name=""> C: positive, neutral</span> <br>
+			   <span> <input type="checkbox" name=""> D: negative, positive</span>
 			   <br> <input type="button" value="NEXT" name="" class="next3">
 		</p>
 		<p class="four">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no4">4.</span>
+Astigmatism could be corrected with the use of a ___?
+			   <br> <span> <input type="checkbox" name=""> A: convex mirror</span> <br>
+			   <span> <input type="checkbox" name=""> B: convex lens</span> <br>
+			   <span> <input type="checkbox" name=""> C:  cylindrical lens</span> <br>
+			   <span> <input type="checkbox" name=""> D: concave mirror</span>
 			   <br> <input type="button" value="NEXT" name="" class="next4">
 		</p>
 		<p class="five">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no5">5.</span>
+The ability of the eye to focus on both far and near obects is called ___?
+			   <br> <span> <input type="checkbox" name=""> A: housing</span> <br>
+			   <span> <input type="checkbox" name=""> B: accommodation</span> <br>
+			   <span> <input type="checkbox" name=""> C: principal focus</span> <br>
+			   <span> <input type="checkbox" name=""> D: presbyopia</span>
 			   <br> <input type="button" value="NEXT" name="" class="next5">
 		</p>
 		<p class="six">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no6">6.</span>
+Musa is ___ Hausa man.
+			   <br> <span> <input type="checkbox" name=""> A: some</span> <br>
+			   <span> <input type="checkbox" name=""> B: a</span> <br>
+			   <span> <input type="checkbox" name=""> C: an</span> <br>
+			   <span> <input type="checkbox" name=""> D: those</span>
 			   <br> <input type="button" value="NEXT" name="" class="next6">
 		</p>
 		<p class="seven">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no7">7.</span>
+His name starts with ___ "H".
+			   <br> <span> <input type="checkbox" name=""> A: some</span> <br>
+			   <span> <input type="checkbox" name=""> B: those</span> <br>
+			   <span> <input type="checkbox" name=""> C: a</span> <br>
+			   <span> <input type="checkbox" name=""> D: an</span>
 			   <br> <input type="button" value="NEXT" name="" class="next7">
 		</p>
 		<p class="eight">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no8">8.</span>
+I'd rather you came back ___ week.
+			   <br> <span> <input type="checkbox" name=""> A: next</span> <br>
+			   <span> <input type="checkbox" name=""> B: this</span> <br>
+			   <span> <input type="checkbox" name=""> C: last</span> <br>
+			   <span> <input type="checkbox" name=""> D: none of the above</span>
 			   <br> <input type="button" value="NEXT" name="" class="next8">
 		</p>
 		<p class="nine">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no9">9.</span>
+It's high time you ___ home.
+			   <br> <span> <input type="checkbox" name=""> A: went</span> <br>
+			   <span> <input type="checkbox" name=""> B: going</span> <br>
+			   <span> <input type="checkbox" name=""> C: go</span> <br>
+			   <span> <input type="checkbox" name=""> D: move</span>
 			   <br> <input type="button" value="NEXT" name="" class="next9">
 		</p>
 		<p class="ten">
-			   <br> <span> <input type="checkbox" name=""> A: </span>
-			   <span> <input type="checkbox" name=""> B: </span>
-			   <span> <input type="checkbox" name=""> C: </span>
-			   <span> <input type="checkbox" name=""> D: </span>
+			<span class="no10">10.</span>
+Obi's father is a teethotaller. This means that obi's father ___?
+			   <br> <span> <input type="checkbox" name=""> A: doesn't take alcholic drinks.</span> <br>
+			   <span> <input type="checkbox" name=""> B: is a whore.</span> <br>
+			   <span> <input type="checkbox" name=""> C: is a drunk.</span> <br>
+			   <span> <input type="checkbox" name=""> D: is a gigolo.</span>
 			   <br> <input type="button" value="NEXT" name="" class="next10">
 		</p>
 
@@ -117,7 +283,16 @@
 
 </div>
 <script>
-	
+	let compete = document.querySelector(".compete");
+	window.addEventListener("scroll", handleScroll);
+	function handleScroll(){
+	if(window.scrollY > 100){
+		compete.classList.add("background")
+	}
+	else{
+		compete.classList.remove("background")
+			}
+	}
 
 
 
