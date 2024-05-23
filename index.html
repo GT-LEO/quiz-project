@@ -8,8 +8,31 @@
 	html, *, *::before, *::after{
 		box-sizing: border-box;
 	}
+	.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten{
+		display: none;
+	}
 	.parent{
 		padding: 5%;
+	}
+	.start{
+	padding: 0.5rem;
+		border-radius: 0.6rem;	
+	}
+	.submit:hover{
+cursor: pointer;
+background: #ccd;
+	}
+	.submit{
+		margin-bottom: 5vw;
+		display: none;
+		border: none;
+		padding: 0.5rem;
+		border-radius: 0.6rem;
+	}
+	.next{
+		display: none;
+		padding: 0.5rem;
+		border-radius: 0.6rem;
 	}
 	.background{
 		background: lavender;
@@ -17,9 +40,46 @@
 	header{
 		margin-top: -5%;
 		display: flex;
-		gap: 28vw;
+		gap: 10vw;
 		align-items: flex-start;
 		position: fixed;
+	}
+	.ok:hover{
+background: lavender;
+	}
+	.ok{
+		display: none;
+		color: #212;
+		text-decoration: none;
+		background: white;
+		padding: 0.3rem;
+		font-size: 1.2rem;
+		border-radius: 0.4rem;
+		font-weight: 600;
+		margin-left: 40vw;
+	}
+	.score-container{
+		display: none;
+	}
+	.answers{
+		display: none;
+		color: white;
+	text-decoration: none;
+		background: #212;
+		padding: 0.3rem;
+		font-size: 1.2rem;
+		border-radius: 0.4rem;
+		font-weight: 600;	
+	}
+	.start:hover{
+cursor: pointer;
+background: #212;
+color: lavender;
+	} 
+	.next:hover{
+cursor: pointer;
+background: #212;
+color: lavender;
 	}
 	nav ul li{
 background: #212;
@@ -34,7 +94,7 @@ text-decoration: none;
 	}
 	nav ul li:hover{
 cursor: pointer;
-background: black;
+background: #212;
 border-radius: 1rem;
 	}
 	nav ul{
@@ -67,8 +127,8 @@ content: "\2715";
 		font-weight: 600;
 	}
 	header div{
-	font-size: 1.6rem;
-		font-weight: 800;
+	font-size: 1.4rem;
+		font-weight: 700;
 		border: 3px solid black;
 		text-align: center;
 		display: inline-block;
@@ -77,9 +137,9 @@ content: "\2715";
 		padding-left: 1rem;
 	}	
 body{
-/*	background: #212;*/
+/*background: #212;*/
 /*background-image:linear-gradient(to top-right, red, green, blue, yellow) ;*/
-background-image:radial-gradient(ellipse, #555, teal, lightgreen, skyblue, #212) ;
+background:/*radial-gradient(ellipse, #555, teal, lightgreen, skyblue, #212)*/#9bc8aa;
 }
 .welcome{
 	background:#212;
@@ -120,7 +180,7 @@ main{
 }
 @media(min-width:861px){
 	header{
-		gap: 40vw;
+		gap: 25vw;
 	}
 }
 
@@ -145,7 +205,7 @@ main{
 }
 
 main h2{
-	border-bottom: 2px solid black;
+
 	display: inline-block;
 }
 
@@ -164,9 +224,8 @@ main h2{
 	<input type="checkbox" id="check">
 	<label for="check"></label>
 	<ul>
-		<li> <a href="">Blog</a> </li>
+		<li> <a href="https://www.facebook.com/profile.php?id=61550058058534&mibextid=ZbWKwL">Blog</a> </li>
 		<li> <a href="mailto:gtoleo21@gmail.com">Email-Us</a> </li>
-		<li> <a href="">Answers</a> </li>
 	</ul>
 </nav>
 </header>
@@ -174,111 +233,108 @@ main h2{
 <main>
 	<p class="welcome">Welcome to GT's quiz competetion!</p> <br>
 	<h2>General Questions</h2> <br>
-	<button>Get Started</button>
+	<button class="start">Get Started</button>
 
 	<div class="Questions">
 		<p class="one">
 			<span class="no1">1.</span>
 Duralumin is used in building of railway coaches and aircraft bodies because ___?
-			   <br> <span> <input type="checkbox" name=""> A: it is a permanent margnet. </span> <br>
-			   <span> <input type="checkbox" name=""> B: it has an inbuilt engine. </span> <br>
-			   <span> <input type="checkbox" name=""> C: it is conductive and radioactive</span> <br>
-			   <span> <input type="checkbox" name=""> D: it is light and strong.</span>
-			   <br> <input type="button" value="NEXT" name="" class="next1">
+			   <br> <span> <input type="checkbox" class="wrong" name=""> A: it is a permanent margnet. </span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> B: it has an inbuilt engine. </span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: it is conductive and radioactive</span> <br>
+			   <span> <input type="checkbox" class="correct1" name=""> D: it is light and strong.</span>
+			   
 		</p>
 		<p class="two">
 			<span class="no2">2.</span>
 The best material for making a lightening conductor is ___? 
-			   <br> <span> <input type="checkbox" name=""> A: Gold</span> <br>
-			   <span> <input type="checkbox" name=""> B: Silver</span> <br>
-			   <span> <input type="checkbox" name=""> C: Copper</span> <br>
-			   <span> <input type="checkbox" name=""> D: Diamond</span>
-			   <br> <input type="button" value="NEXT" name="" class="next2">
+			   <br> <span> <input type="checkbox" class="wrong" name=""> A: Gold</span> <br>
+			   <span> <input type="checkbox" class="correct2" name=""> B: Silver</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: Copper</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> D: Diamond</span>
 		</p>
 		<p class="three">
 			<span class="no3">3.</span>
 When an ebonite rod is rubbed with fur, the ebonite road acquires a ___ charge while the fur acquires a ___ charge?
-			   <br> <span> <input type="checkbox" name=""> A: positive, negative</span> <br>
-			   <span> <input type="checkbox" name=""> B: neutral, postive</span> <br>
-			   <span> <input type="checkbox" name=""> C: positive, neutral</span> <br>
-			   <span> <input type="checkbox" name=""> D: negative, positive</span>
-			   <br> <input type="button" value="NEXT" name="" class="next3">
+			   <br> <span> <input type="checkbox" class="wrong" name=""> A: positive, negative</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> B: neutral, postive</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: positive, neutral</span> <br>
+			   <span> <input type="checkbox" class="correct3" name=""> D: negative, positive</span>
 		</p>
 		<p class="four">
 			<span class="no4">4.</span>
 Astigmatism could be corrected with the use of a ___?
-			   <br> <span> <input type="checkbox" name=""> A: convex mirror</span> <br>
-			   <span> <input type="checkbox" name=""> B: convex lens</span> <br>
-			   <span> <input type="checkbox" name=""> C:  cylindrical lens</span> <br>
-			   <span> <input type="checkbox" name=""> D: concave mirror</span>
-			   <br> <input type="button" value="NEXT" name="" class="next4">
+			   <br> <span> <input type="checkbox" class="wrong" name=""> A: convex mirror</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> B: convex lens</span> <br>
+			   <span> <input type="checkbox" class="correct4" name=""> C:  cylindrical lens</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> D: concave mirror</span>
 		</p>
 		<p class="five">
 			<span class="no5">5.</span>
 The ability of the eye to focus on both far and near obects is called ___?
-			   <br> <span> <input type="checkbox" name=""> A: housing</span> <br>
-			   <span> <input type="checkbox" name=""> B: accommodation</span> <br>
-			   <span> <input type="checkbox" name=""> C: principal focus</span> <br>
-			   <span> <input type="checkbox" name=""> D: presbyopia</span>
-			   <br> <input type="button" value="NEXT" name="" class="next5">
+			   <br> <span> <input type="checkbox" class="wrong" name=""> A: housing</span> <br>
+			   <span> <input type="checkbox" class="correct5" name=""> B: accommodation</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: principal focus</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> D: presbyopia</span>
 		</p>
 		<p class="six">
 			<span class="no6">6.</span>
 Musa is ___ Hausa man.
-			   <br> <span> <input type="checkbox" name=""> A: some</span> <br>
-			   <span> <input type="checkbox" name=""> B: a</span> <br>
-			   <span> <input type="checkbox" name=""> C: an</span> <br>
-			   <span> <input type="checkbox" name=""> D: those</span>
-			   <br> <input type="button" value="NEXT" name="" class="next6">
+			   <br> <span> <input type="checkbox" class="wrong" name=""> A: some</span> <br>
+			   <span> <input type="checkbox" class="correct6" name=""> B: a</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: an</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> D: those</span>
 		</p>
 		<p class="seven">
 			<span class="no7">7.</span>
 His name starts with ___ "H".
-			   <br> <span> <input type="checkbox" name=""> A: some</span> <br>
-			   <span> <input type="checkbox" name=""> B: those</span> <br>
-			   <span> <input type="checkbox" name=""> C: a</span> <br>
-			   <span> <input type="checkbox" name=""> D: an</span>
-			   <br> <input type="button" value="NEXT" name="" class="next7">
+			   <br> <span> <input type="checkbox" class="wrong" name=""> A: some</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> B: those</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: a</span> <br>
+			   <span> <input type="checkbox" class="correct7" name=""> D: an</span>
 		</p>
 		<p class="eight">
 			<span class="no8">8.</span>
 I'd rather you came back ___ week.
-			   <br> <span> <input type="checkbox" name=""> A: next</span> <br>
-			   <span> <input type="checkbox" name=""> B: this</span> <br>
-			   <span> <input type="checkbox" name=""> C: last</span> <br>
-			   <span> <input type="checkbox" name=""> D: none of the above</span>
-			   <br> <input type="button" value="NEXT" name="" class="next8">
+			   <br> <span> <input type="checkbox" class="correct8" name=""> A: next</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> B: this</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: last</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> D: none of the above</span>
 		</p>
 		<p class="nine">
 			<span class="no9">9.</span>
 It's high time you ___ home.
-			   <br> <span> <input type="checkbox" name=""> A: went</span> <br>
-			   <span> <input type="checkbox" name=""> B: going</span> <br>
-			   <span> <input type="checkbox" name=""> C: go</span> <br>
-			   <span> <input type="checkbox" name=""> D: move</span>
-			   <br> <input type="button" value="NEXT" name="" class="next9">
+			   <br> <span> <input type="checkbox" class="correct9" name=""> A: went</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> B: going</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: go</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> D: move</span>
 		</p>
 		<p class="ten">
 			<span class="no10">10.</span>
 Obi's father is a teethotaller. This means that obi's father ___?
-			   <br> <span> <input type="checkbox" name=""> A: doesn't take alcholic drinks.</span> <br>
-			   <span> <input type="checkbox" name=""> B: is a whore.</span> <br>
-			   <span> <input type="checkbox" name=""> C: is a drunk.</span> <br>
-			   <span> <input type="checkbox" name=""> D: is a gigolo.</span>
-			   <br> <input type="button" value="NEXT" name="" class="next10">
+			   <br> <span> <input type="checkbox" class="correct10" name=""> A: doesn't take alcoholic drinks.</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> B: is a whore.</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> C: is a drunk.</span> <br>
+			   <span> <input type="checkbox" class="wrong" name=""> D: is a gigolo.</span>
 		</p>
+
+			   <br> <input type="button" value="NEXT" name="" class="next">
+			   <br>
 
 		<h2 class="score-container">
 			Your score is <span class="score"></span>
 			<br>
-			<button class="ok">OK</button>
+			<br>
+			<a href="./other-pages/answers.html" class="answers">ANSWERS</a>
+			<a href="" class="ok">OK</a>
+			<!-- <button class="ok">OK</button> -->
 		</h2>
 	</div>
-	<button>Submit</button>
+	<button class="submit">Submit</button>
 </main>
 
 <footer>
-	This project was designed and developed(built) by <a href="">GT LEO</a>
+	This project was designed and developed(built) by <a href="https://www.facebook.com/profile.php?id=61550058058534&mibextid=ZbWKwL">GT LEO</a>
 </footer>
 
 </div>
@@ -293,6 +349,194 @@ Obi's father is a teethotaller. This means that obi's father ___?
 		compete.classList.remove("background")
 			}
 	}
+let mark = 0;
+let count = 0;
+	let one = document.querySelector(".one");
+	let two = document.querySelector(".two");
+	let three = document.querySelector(".three");
+	let four = document.querySelector(".four");
+	let five = document.querySelector(".five");
+	let six = document.querySelector(".six");
+	let seven = document.querySelector(".seven");
+	let eight = document.querySelector(".eight");
+	let nine = document.querySelector(".nine");
+	let ten = document.querySelector(".ten");
+	let answers = document.querySelector(".answers");
+	let scoreContainer = document.querySelector(".score-container");
+	let ok = document.querySelector(".ok");
+	let submit = document.querySelector(".submit");
+
+	let start = document.querySelector(".start");
+	let correct1 = document.querySelector(".correct1").checked;
+	let correct2 = document.querySelector(".correct2").checked;
+	let correct3 = document.querySelector(".correct3").checked;
+	let correct4 = document.querySelector(".correct4").checked;
+	let correct5 = document.querySelector(".correct5").checked;
+	let correct6 = document.querySelector(".correct6").checked;
+	let correct7 = document.querySelector(".correct7").checked;
+	let correct8 = document.querySelector(".correct8").checked;
+	let correct9 = document.querySelector(".correct9").checked;
+	let correct10 = document.querySelector(".correct10").checked;
+	let wrong = document.querySelectorAll(".wrong").checked;
+	let score = document.querySelector(".score");
+	let next = document.querySelector(".next");
+start.addEventListener("click", handleStart);
+submit.addEventListener("click", handleSubmit);
+next.addEventListener("click", handleNext);
+function handleStart(e){
+one.style.display = "block";
+next.style.display = "block";
+this.style.display = "none"
+}
+function handleSubmit(e){
+scoreContainer.style.display = "block";
+this.style.display = "none";
+
+}
+function handleNext(e){
+	// count = count + 1;
+	count += 1;
+	score.innerText = count;
+	if(count => 1){
+		start.style.display = "none";
+	}
+	if(count === 1){
+two.style.display = "block";
+
+three.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+five.style.display = "none";
+six.style.display = "none";
+seven.style.display = "none";
+eight.style.display = "none";
+nine.style.display = "none";
+ten.style.display = "none";
+
+}
+
+if(count === 2){
+three.style.display = "block";
+
+two.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+five.style.display = "none";
+six.style.display = "none";
+seven.style.display = "none";
+eight.style.display = "none";
+nine.style.display = "none";
+ten.style.display = "none";
+
+}
+
+if(count === 3){
+four.style.display = "block";
+
+three.style.display = "none";
+one.style.display = "none";
+two.style.display = "none";
+five.style.display = "none";
+six.style.display = "none";
+seven.style.display = "none";
+eight.style.display = "none";
+nine.style.display = "none";
+ten.style.display = "none";
+}
+
+if(count === 4){
+five.style.display = "block";
+
+three.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+two.style.display = "none";
+six.style.display = "none";
+seven.style.display = "none";
+eight.style.display = "none";
+nine.style.display = "none";
+ten.style.display = "none";
+}
+
+if(count === 5){
+six.style.display = "block";
+
+three.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+five.style.display = "none";
+two.style.display = "none";
+seven.style.display = "none";
+eight.style.display = "none";
+nine.style.display = "none";
+ten.style.display = "none";
+}
+
+if(count === 6){
+seven.style.display = "block";
+
+three.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+five.style.display = "none";
+six.style.display = "none";
+two.style.display = "none";
+eight.style.display = "none";
+nine.style.display = "none";
+ten.style.display = "none";
+}
+
+if(count === 7){
+eight.style.display = "block";
+
+three.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+five.style.display = "none";
+six.style.display = "none";
+seven.style.display = "none";
+two.style.display = "none";
+nine.style.display = "none";
+ten.style.display = "none";
+}
+
+if(count === 8){
+nine.style.display = "block";
+
+three.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+five.style.display = "none";
+six.style.display = "none";
+seven.style.display = "none";
+eight.style.display = "none";
+two.style.display = "none";
+ten.style.display = "none";
+}
+
+if(count === 9){
+ten.style.display = "block";
+answers.style.display = "inline-block";
+submit.style.display = "inline-block";
+ok.style.display = "inline-block";
+next.style.display = "none";
+this.style.display = "none";
+three.style.display = "none";
+one.style.display = "none";
+four.style.display = "none";
+five.style.display = "none";
+six.style.display = "none";
+seven.style.display = "none";
+eight.style.display = "none";
+nine.style.display = "none";
+two.style.display = "none";
+}
+
+else{
+	
+}
+
+}
 
 
 
