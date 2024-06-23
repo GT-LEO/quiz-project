@@ -38,9 +38,10 @@ background: #ccd;
 		background: lavender;
 	}
 	header{
+		padding-right: 3vw;
 		margin-top: -5%;
 		display: flex;
-		gap: 10vw;
+		gap: 18vw;
 		align-items: flex-start;
 		position: fixed;
 	}
@@ -99,7 +100,7 @@ border-radius: 1rem;
 	}
 	nav ul{
 		display: none;
-		margin-left: -25vw;
+		margin-left: -30vw;
 		margin-bottom: -0.5rem;
 		list-style: none;
 	}
@@ -127,14 +128,14 @@ content: "\2715";
 		font-weight: 600;
 	}
 	header div{
-	font-size: 1.4rem;
-		font-weight: 700;
+	font-size: 1.2rem;
+		font-weight: 600;
 		border: 3px solid black;
 		text-align: center;
 		display: inline-block;
 		line-height: 3rem;
-		padding-right: 1rem;
-		padding-left: 1rem;
+		padding-right: 0.6rem;
+		padding-left: 0.6rem;
 	}	
 body{
 /*background: #212;*/
@@ -178,9 +179,32 @@ background:/*radial-gradient(ellipse, #555, teal, lightgreen, skyblue, #212)*/#9
 main{
 	margin-top: 30vh;
 }
-@media(min-width:861px){
+
+@media(min-width:730px){
 	header{
 		gap: 25vw;
+	}
+}
+@media(min-width:750px){
+	header{
+		gap: 38vw;
+	}
+}
+
+@media(min-width:780px){
+	header{
+		gap: 40vw;
+	}
+}
+@media(min-width:820px){
+	header{
+		gap: 46vw;
+	}
+}
+
+@media(min-width:861px){
+	header{
+		gap: 50vw;
 	}
 }
 
@@ -188,14 +212,14 @@ main{
 @media(min-width:961px){
 	nav ul{
 		display: flex;
-		gap: 4vw;
-
+		gap: 10vw;
+padding-left:8vw;
 	}
 	nav label{
 		display: none;
 	}
 	header{
-		gap: 35vw;
+		gap: 40vw;
 	}
 }
 @media(min-width:1106px){
@@ -367,20 +391,12 @@ let count = 0;
 	let submit = document.querySelector(".submit");
 
 	let start = document.querySelector(".start");
-	let correct1 = document.querySelector(".correct1").checked;
-	let correct2 = document.querySelector(".correct2").checked;
-	let correct3 = document.querySelector(".correct3").checked;
-	let correct4 = document.querySelector(".correct4").checked;
-	let correct5 = document.querySelector(".correct5").checked;
-	let correct6 = document.querySelector(".correct6").checked;
-	let correct7 = document.querySelector(".correct7").checked;
-	let correct8 = document.querySelector(".correct8").checked;
-	let correct9 = document.querySelector(".correct9").checked;
-	let correct10 = document.querySelector(".correct10").checked;
-	let wrong = document.querySelectorAll(".wrong").checked;
+	
 	let score = document.querySelector(".score");
 	let next = document.querySelector(".next");
+
 start.addEventListener("click", handleStart);
+// correct1.addEventListener("click", handleCorrect1);
 submit.addEventListener("click", handleSubmit);
 next.addEventListener("click", handleNext);
 function handleStart(e){
@@ -391,12 +407,107 @@ this.style.display = "none"
 function handleSubmit(e){
 scoreContainer.style.display = "block";
 this.style.display = "none";
+let correct1 = document.querySelector(".correct1").checked;
+let correct2 = document.querySelector(".correct2").checked;
+	let correct3 = document.querySelector(".correct3").checked;
+	let correct4 = document.querySelector(".correct4").checked;
+	let correct5 = document.querySelector(".correct5").checked;
+	let correct6 = document.querySelector(".correct6").checked;
+	let correct7 = document.querySelector(".correct7").checked;
+	let correct8 = document.querySelector(".correct8").checked;
+	let correct9 = document.querySelector(".correct9").checked;
+	let correct10 = document.querySelector(".correct10").checked;
+	let wrong = document.querySelectorAll(".wrong").checked;
+let mark = 0;
 
+/*if((correct1 && !wrong) || (correct2 && !wrong) || (correct3 && !wrong) || (correct4 && !wrong) || (correct5 && !wrong) || (correct6 && !wrong) || (correct7 && !wrong) || (correct8 && !wrong) || (correct9 && !wrong) || (correct10 && !wrong)){
+mark += 10;
+	/*console.log("corrected!");
+	console.log(mark);
+console.log(mark);
+	score.innerText = mark + "%";
+}*/
+
+if(correct1 || correct2 || correct3 || correct4 || correct5 || correct6 || correct7 || correct8 || correct9 || correct10){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+console.log(mark);
+	score.innerText = mark;
+	console.log("corrected!");
+	console.log(mark);
+	score.innerText = mark + "%";
+}
+
+
+if(correct2){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+
+if(correct3){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+if(correct4){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+if(correct5){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+if(correct6){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+if(correct7){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+if(correct8){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+if(correct9){
+mark = mark + 10;
+	/*console.log("corrected!");
+	console.log(mark);*/
+}
+if(correct10){
+mark = mark + 10;
+	console.log(mark);
+	score.innerText = mark;
+	console.log("corrected!");
+	console.log(mark);
+	score.innerText = mark + "%";
+}
+else if(correct1 && wrong || correct2 && wrong || correct3 && wrong || correct4 && wrong || correct5 && wrong || correct6 && wrong || correct7 && wrong || correct8 && wrong || correct9 && wrong || correct10 && wrong || wrong ){
+	mark = mark + 0;
+	console.log(mark);
+	score.innerText = mark + "%";
+
+}
+if(mark <= 39){
+	score.style.color = "red";
+}
+if(mark >= 39 && mark <= 69){
+	score.style.color = "yellow";
+}
+if(mark >= 70){
+	score.style.color = "green";
+}
 }
 function handleNext(e){
 	// count = count + 1;
 	count += 1;
-	score.innerText = count;
 	if(count => 1){
 		start.style.display = "none";
 	}
