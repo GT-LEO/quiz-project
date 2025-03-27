@@ -214,6 +214,7 @@ score.innerText = finalScore;
 // alert(finalScore);
  this.style.display = "none";
 scoreContainer.style.display = "block";
+answers.style.display = "block";
 if(finalScore <= 39){
 	score.style.color = "red";
 }
